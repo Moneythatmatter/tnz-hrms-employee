@@ -1,7 +1,7 @@
 const getApiBaseUrl = (): string => {
   const envUrl = process.env.NEXT_PUBLIC_API_URL;
   if (envUrl) return envUrl.replace(/\/$/, "");
-  return "http://127.0.0.1:5002";
+  return "https://tnz-hrms-backend.onrender.com";
 };
 
 const API_BASE = getApiBaseUrl();
