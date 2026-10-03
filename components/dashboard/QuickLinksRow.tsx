@@ -6,6 +6,7 @@ import {
   CalendarDays,
   Clock,
   Banknote,
+  MessageSquareWarning,
   Palmtree,
   Timer,
 } from "lucide-react";
@@ -14,6 +15,7 @@ import { cn } from "@/lib/cn";
 const LINKS = [
   { href: "/attendance", label: "Attendance", icon: CalendarCheck, tone: "text-emerald-700 bg-emerald-50" },
   { href: "/leave", label: "Leave", icon: Palmtree, tone: "text-amber-700 bg-amber-50" },
+  { href: "/grievances", label: "Grievances", icon: MessageSquareWarning, tone: "text-rose-700 bg-rose-50" },
   { href: "/schedule", label: "Schedule", icon: Clock, tone: "text-blue-700 bg-blue-50" },
   { href: "/holidays", label: "Holidays", icon: CalendarDays, tone: "text-violet-700 bg-violet-50" },
   { href: "/overtime", label: "Overtime", icon: Timer, tone: "text-purple-700 bg-purple-50" },
@@ -22,7 +24,7 @@ const LINKS = [
 
 export function QuickLinksRow({ className }: { className?: string }) {
   return (
-    <div className={cn("grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6", className)}>
+    <div className={cn("grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7", className)}>
       {LINKS.map(({ href, label, icon: Icon, tone }) => (
         <Link
           key={href}
